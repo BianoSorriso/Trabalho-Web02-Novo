@@ -1,0 +1,84 @@
+.destaque-itens-item {
+  position: relative;
+  border: 2px solid #212121;
+  border-radius: 10px;
+ 
+}
+.destaque-itens-item p,
+h1 {
+  padding-left: 9px;
+}
+
+.destaque-itens-item .preco {
+  padding-top: 7px;
+  padding-bottom: 9px;
+}
+
+.destaque-itens-item::before {
+  position: absolute;
+  content: '';
+  display: inline-block;
+  width: 21px;
+  height: 25px;
+  background-image: url('../imgs/emphasis.svg');
+  background-size: cover;
+  left: -2px;
+  top: -2px;
+}
+
+.destaque-itens {
+  max-width: 880px;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-items: center;
+  justify-content: center;
+  gap: 20px 20px;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 158px;
+}
+
+.destaque-itens::after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 300px;
+  height: 2px;
+  background-color: #020201;
+  bottom: -50px;
+}
+
+.camisas-destaque {
+  padding-top: 20px;
+  grid-column: 1/-1;
+  justify-self: center;
+  max-width: 350px;
+}
+.camisas-destaque h1 {
+  text-align: center;
+}
+.camisas-destaque p {
+  text-align: center;
+  margin-top: 5px;
+}
+
+@media (max-width: 860px) {
+  .destaque-itens {
+    grid-template-columns: repeat(3, auto);
+    gap: 15px 20px;
+  }
+}
+
+@media (max-width: 630px) {
+  .destaque-itens {
+    grid-template-columns: repeat(2, auto);
+    gap: 15px 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .destaque-itens {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+  }
+}

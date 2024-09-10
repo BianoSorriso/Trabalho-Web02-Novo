@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+
+html {
+  --bg-primario: #fff6e8;
+  --cor-primaria: #734939;
+  --cor-secundaria: #ffb386;
+  --titulo-grande: 1.4rem; 
+  --titulo-medio: 1rem; 
+  --titulo-pequeno: 0.5rem; 
+  --subtitulo-grande: 0.1rem;
+  --subtitulo-pequeno: 0.1rem; 
+}
+
+.btn {
+  padding: 8px 30px; 
+  border: 2px solid #ffb386;
+  border-radius: 30px; 
+  color: #ffb386;
+  font-family: 'Zen Dots', cursive;
+  font-size: 0.875rem; 
+  text-align: center;
+  letter-spacing: 0.36px;
+}
+
+
+.menu a.login {
+  font-family: 'Zen Dots', sans-serif; 
+  color: #ffffff; 
+  font-size: 0.7rem; 
+  text-decoration: none; 
+}
+
+.titulo {
+  font-family: 'Zen Dots', cursive;
+  color: #858178fd;
+}
+
+.titulo.grande {
+  font-size: var(--titulo-grande);
+  font-weight: 700;
+}
+
+.titulo.medio {
+  font-size: var(--titulo-medio);
+  font-weight: 600;
+}
+
+.titulo.pequeno {
+  font-size: var(--titulo-pequeno);
+  font-weight: 10;
+}
+
+.preco {
+  font-family: 'Zen Dots', cursive;
+  font-weight: 600;
+  color: #1c8a1f;
+  font-size: 0.625rem; 
+  letter-spacing: -0.24px;
+}
+
+.sub-titulo {
+  font-family: 'Zen Dots', cursive; 
+  font-size: 0.65rem; 
+  color: #141414; 
+  line-height: 1.4; 
+  margin-top: 10px; 
+  margin-bottom: 20px;
+}
+
+
+.sub-titulo.grande {
+  font-size: var(--subtitulo-grande);
+  margin-top: 14px;
+  margin-bottom: 20px;
+}
+
+.sub-titulo.pequeno {
+  font-size: var(--subtitulo-pequeno);
+  margin: 0;
+}
+
+.sub-titulo.b {
+  font-size: 0.55rem; 
+  font-weight: 700;
+  margin: 10;
+}
+
+.sub-titulo.indice {
+  font-size: 0.55rem; 
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.sub-titulo button {
+  font-size: 0.75rem; 
+  letter-spacing: 0.32px;
+  border: 2px solid #c17d18;
+  padding: 8px 30px; 
+  border-radius: 30px;
+  transition: 0.2s;
+}
+
+.sub-titulo button:hover,
+.sub-titulo button.ativo {
+  border-color: #a66253;
+  font-weight: 600;
+  color: #626060;
+}
+
+
+
+
+.hidden {
+  display: none;
+}
+
+.cor-3 {
+  color: #b05b3b;
+}
+
+.sb {
+  font-weight: 600;
+}
+
+.sm {
+  font-size: 0.75rem; 
+  
+
+}
+
+.md {
+  font-size: 0.75rem; 
+}
+
+.big {
+  font-size: 0.75rem; 
+}
+
+.left {
+  text-align: left;
+}
+
+.rg {
+  font-weight: 400;
+}
+
+.alert {
+  color: #d94e4e;
+}
+
+

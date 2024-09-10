@@ -1,0 +1,43 @@
+.banner img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto; 
+  object-fit: contain; 
+ 
+  
+}
+.banner {
+  position: relative;
+ margin-top: 0.50px;
+ ;
+  
+   
+}
+.seta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.setaAnterior {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 60%;
+  left: 25px;
+  z-index: 2;
+  cursor: pointer;
+}
+.setaAnterior img {
+  transform: rotateY(180deg);
+}
+
+.setaPosterior {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 60%;
+  right: 20px;
+  z-index: 10;
+  cursor: pointer;
+}
+

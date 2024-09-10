@@ -1,0 +1,146 @@
+#login {
+  height: calc(100vh - 124px);
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0px 0px;
+}
+#login .logo {
+  margin-top: 124px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+#login .logo::after {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 2px;
+  background-color: #090908;
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#login form {
+  max-width: 500px;
+  margin: 80px auto 0px auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  justify-items: center;
+}
+
+#login form h1 {
+  max-width: 300px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size:20px;
+  
+}
+
+.bnt-google {
+  width: 300px;
+  padding: 15px 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #171615;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+input[type='email'] {
+  margin-bottom: 15px;
+
+  background-image: url('../imgs/email.svg');
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position: 18px;
+  padding-left: 58px;
+  background-color: #fff6e8;
+}
+
+input[type='password'] {
+  margin-bottom: 15px;
+
+  background-image: url('../imgs/lock.svg');
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position: 18px;
+  padding-left: 58px;
+}
+
+input {
+  width: 300px;
+  font-family: 'Zen Dots';
+  color: #100f0f;
+  border-radius: 12px;
+  padding: 15px 18px;
+  border: 2px solid #1f1e1e;
+  background-color: #fff6e8;
+  font-size: 1.125rem;
+  outline: none;
+}
+
+
+
+input:focus {
+  box-shadow: 0px 0px 0px 2px #080707;
+}
+input::placeholder {
+  color: #000000;
+  font-family: 'Zen Dots';
+}
+
+.ou {
+  margin-bottom: 20px;
+}
+.bnt-entrar {
+  width: 300px;
+  padding: 15px 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #050505;
+  margin-bottom: 14px;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: 'Zen Dots';
+}
+.bnt-entrar a {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.bnt-entrar a::after {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url('../imgs/Vector.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  justify-self: end;
+  position: absolute;
+  right: -110px;
+}
+#login .linkCadastro {
+  margin-top: 0px;
+}
+
+@media (max-width: 400px) {
+  #login .logo {
+    margin-top: 80px;
+  }
+  #login {
+    background-position: left bottom;
+  }
+  .bnt-entrar {
+    padding: 20px 50px;
+  }
+}

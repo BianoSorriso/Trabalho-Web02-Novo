@@ -1,0 +1,84 @@
+#cadastro {
+  height: calc(100vh - 124px);
+  background-image: url('../imgs/bg-login.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0px 0px;
+}
+#cadastro .logo {
+  margin-top: 124px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+#cadastro .logo::after {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 2px;
+  background-color: #e5d3b5;
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#cadastro form {
+  max-width: 500px;
+  margin: 80px auto 0px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+#cadastro div + div {
+  margin-top: 10px;
+}
+#cadastro .campo-email {
+  grid-column: 1/-1;
+}
+#cadastro #email {
+  width: 100%;
+}
+
+#cadastro .campo-celular {
+  margin-top: 0px;
+}
+
+#cadastro .bnt-google {
+  grid-column: 1/-1;
+  justify-self: center;
+}
+
+#cadastro .ou {
+  grid-column: 1/-1;
+  justify-self: center;
+}
+
+#cadastro .bnt-entrar {
+  grid-column: 1/-1;
+  justify-self: center;
+}
+
+#cadastro .bnt-entrar a::after {
+  right: -100px;
+}
+#cadastro #perguntaLogin {
+  font-weight: 600;
+  grid-column: 1/-1;
+  text-align: center;
+  & a {
+    color: #a66253;
+  }
+}
+
+.campo-nome #nome {
+  background-image: url('../imgs/id-card.svg');
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position: 18px;
+  padding-left: 58px;
+}

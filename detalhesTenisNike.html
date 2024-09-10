@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Detalhes do Nike</title>
+  <link rel="icon" href="./imgs/favicon.svg" type="image/svg+xml">
+  <meta name="description" content="Energia e desempenho para todos os níveis e esportes.">
+</head>
+
+<body id="detalhes">
+  <header>
+    <nav aria-label="primaria">
+      <div class="voltar">
+        <a href="./index.html">
+          <img src="./imgs/arrow.svg" alt="">
+        </a>
+        <h1 class="titulo cor-0 b"><a href="./index.html">Voltar</a></h1>
+
+      </div>
+
+      <div class="logo">
+        <a href="./"><img src="./imgs/Logo.svg" alt="logo fago" width="253" height="34"></a>
+      </div>
+      <div class="menu">
+
+        <div id="carrinho">
+          <div class="modal-carrinho hidden">
+            <h1 class=" titulo cor-3">Carrinho está vazio</h1>
+          </div>
+          <span id="numero">0</span>
+          <img src="./imgs/cart.svg" alt="">
+
+        </div>
+        <div class="perfil">
+
+          <div class="bg-perfil">
+            <div class="modal-perfil hidden">
+              <div class="perfil">
+                <img src="./imgs/user-circle.svg" alt="">
+                <h1 class="titulo cor-3 medio" cor-3>Meu perfil</h1>
+              </div>
+
+              <div class="logout">
+                <img src="./imgs/logout.svg" alt="">
+                <h1 class="titulo alert medio">Sair</h1>
+              </div>
+            </div>
+            <img src="./imgs/FotoPerfil.svg" alt="">
+          </div>
+
+         
+
+      </div>
+    </nav>
+  </header>
+
+  <div class="detalhes">
+
+    <div class="img-produto">
+      <img src="./imgs/NIKE.png" alt=" ">
+    </div>
+
+    <div class="conteudo-produto">
+      <span class="titulo b cor-1 sm">TÊNIS</span>
+      <h1 class="titulo big ">Tênis Air Nike Verde</h1>
+      <p class="titulo cor-0 md rg" id="corpoTexto">Tênis Nike Air Verde</p>
+      <p class="titulo md" id="peso"></p>
+      <div class="preco">
+        <p class="titulo cor-0 grande">R$ 379,00</p>
+      </div>
+
+      <div class="tamanhos-tenis">
+        <button class="tamanho-btn-tenis" data-tamanho="36">36</button>
+        <button class="tamanho-btn-tenis" data-tamanho="37">37</button>
+        <button class="tamanho-btn-tenis" data-tamanho="38">38</button>
+        <button class="tamanho-btn-tenis" data-tamanho="39">39</button>
+        <button class="tamanho-btn-tenis" data-tamanho="40">40</button>
+      </div>
+        
+      <button class="addCarrinho btn cor-3 sb">Adicionar ao carrinho</button>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+  <script src="./js/modules/carrinho.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+  <link rel="preload" href="./css/style.css" as="style">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Fago Sports</title>
+  <link rel="icon" href="./imgs/favicon.svg" type="image/svg+xml">
+  <meta name="description" content="Energia e desempenho para todos os níveis e esportes.">
+</head>
+
+
+<body>
+  <header>
+    <nav aria-label="primaria">
+      <div class="logo">
+        <a href="./"><img src="./imgs/Logo.svg" alt="logo Fago" width="253" height="34"></a>
+      </div>
+      <div class="menu">
+
+        <img src="./imgs/cart.svg" alt="">
+        <a href="./login.html" class="login">Faça seu login</a>
+      </div>
+    </nav>
+  </header>
+
+  <section>
+    <div class="banner">
+      <div class="setaAnterior seta">
+        <img src="./imgs/previous-carrosel.svg" alt="" id="previous">
+      </div>
+      <div class="banner-img">
+        <img src="./imgs/img1.jpg" alt="" id="imagem-banner">
+
+        
+
+      <div class="setaPosterior seta">
+        <img src="./imgs/previous-carrosel.svg" alt="" id="next">
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="destaque-itens">
+
+      <div class="camisas-destaque">
+
+        <h1 class="titulo grande">Produtos em destaque</h1>
+        <p class="sub-titulo">Aqui você encontra os destaques por sua popularidade, além de novidades do mundo esportivo</p>
+      </div>
+
+      <div class="destaque-itens-item">
+        <img src="./imgs/FLAMENGO.png" alt="" width="197" class="miniatura-destaque">
+        <p class="sub-titulo b ">CAMISAS</p>
+        <h1 class="titulo sm">Camisa Flamengo 2024</h1>
+        <p class="preco">R$ 297,00</p>
+      </div>
+      <div class="destaque-itens-item">
+        <img src="./imgs/ALEMANHA.png" alt="" width="185" class="miniatura-destaque">
+        <p class="sub-titulo b ">CAMISAS</p>
+        <h1 class="titulo sm">Camisa Alemanha 2024</h1>
+        <p class="preco">R$ 218,00</p>
+      </div>
+      <div class="destaque-itens-item">
+        <img src="./imgs/INDYANA.png" alt="" width="205" class="miniatura-destaque">
+        <p class="sub-titulo b ">CAMISAS</p>
+        <h1 class="titulo sm">Regata Indy Pacers 24</h1>
+        <p class="preco">R$ 197,00</p>
+      </div>
+      <div class="destaque-itens-item">
+        <img src="./imgs/NIKE KOBE PROTO.png" alt="" width="198" height="208"  class="miniatura-destaque">
+        <p class="sub-titulo b ">TÊNIS</p>
+        <h1 class="titulo sm">Tênis NIKE Kobe Proto</h1>
+        <p class="preco">R$ 349,99</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="catalogo">
+    <div class="catalogo ">
+      <h1 class="titulo grande">Catálogo</h1>
+      <p class="sub-titulo sm">Onde você encontra todos os produtos,ordenados ou filtrados</p>
+      <div class="search">
+        <input type="text" autocomplete="off" placeholder="Pesquise pelo nome do Produto">
+        <div class="icones">
+
+          <img src="./imgs/filtro.svg" alt="" width="26" height="26">
+          <img src="./imgs/search.svg" alt="" width="26" height="26" id="iconePesquisa">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="filtros">
+    <ul class="sub-titulo filtro">
+      <li><button href="">Camisas</button></li>
+      <li><button href="">Tênis</button></li>
+      <li><button href="">Acessórios</button></li>
+      <li><button href="" class="ativo">Todos</button></li>
+
+    </ul>
+  </div>
+
+
+  <section id="secaoItens">
+    <div class="destaque-itens">
+      <div class="destaque-itens-item">
+        <img src="./imgs/FLAMENGO.png " alt="" width="197" class="miniatura-destaque">
+        <p class="sub-titulo b indice">CAMISAS</p>
+        <h1 class="titulo sm camisa">Camisa Flamengo 2024</h1>
+        <p class="preco">R$ 297,00</p>
+      </div>
+
+      <div class="destaque-itens-item">
+        <img src="./imgs/MILWAWKEE.png" alt="" width="197" class="miniatura-destaque">
+        <p class="sub-titulo b indice">CAMISAS</p>
+        <h1 class="titulo sm camisa">Regata Milwakee Bucks</h1>
+        <p class="preco">R$ 197,00</p>
+      </div>
+
+      <div class="destaque-itens-item">
+        <img src="./imgs/SB DUNK.png" alt="" width="197" height="203" class="miniatura-destaque">
+        <p class="sub-titulo b indice">TÊNIS</p>
+        <h1 class="titulo sm camisa">Tênis Nike</h1>
+        <p class="preco">R$ 306,50</p>
+      </div>
+
+      <div class="destaque-itens-item">
+        <img src="./imgs/PALMEIRAS.png" alt="" width="197" height="203" class="miniatura-destaque">
+        <p class="sub-titulo b indice">CAMISAS</p>
+        <h1 class="titulo sm camisa">Camisa Palmeiras 2024</h1>
+        <p class="preco">R$ 286,00</p>
+      </div>
+
+      
+      <div class="destaque-itens-item">
+        <a href="./detalhesTenisNike.html">              
+        <img src="./imgs/NIKE.png" alt="" width="197" height="191" class="miniatura-destaque"></a>
+        <p class="sub-titulo b indice">TÊNIS</p>
+        <h1 class="titulo sm camisa">Tênis Nike Air Verde</h1>
+        <p class="preco">R$ 379,00</p>
+      </div>
+
+
+      <div class="destaque-itens-item">
+        <a href="./realmadrid.html">
+          <img src="./imgs/REAL MADRID.jpg" alt="" width="197" class="miniatura-destaque">
+        </a>
+        <p class="sub-titulo b indice">CAMISAS</p>
+        <h1 class="titulo sm camisa">Camisa Real Madrid 24</h1>
+        <p class="preco">R$ 508,00</p>
+
+      </div>
+
+      
+      <div class="destaque-itens-item">              
+          <img src="./imgs/BOLA PENALTI.jpg" alt="" width="197" height="191"class="miniatura-destaque"></a>
+        <p class="sub-titulo b indice">ACESSÓRIOS</p>
+        <h1 class="titulo sm camisa">Bola Infantil Penalty</h1>
+        <p class="preco">R$ 27,00</p>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    <div class="minhaConta">
+      <ul>
+        <li>
+          <h1>Minha Conta</h1>
+        </li>
+        <li><a href="">Minha Conta</a></li>
+        <li><a href="">Meus Pedidos</a></li>
+        <li><a href="">Pagamentos</a></li>
+      </ul>
+    </div>
+    <div class="institucional">
+      <ul>
+
+        <li>
+          <h1>Institucional</h1>
+        </li>
+        <li><a href="">História</a></li>
+        <li><a href="">Depoimentos</a></li>
+        <li><a href="">Código do Consumidor</a></li>
+        <li><a href="">Política de Privacidade</a></li>
+      </ul>
+    </div>
+    <div class="meiosPagamentos">
+      <ul>
+        <li>
+          <h1>Meios de Pagamento</h1>
+        </li>
+        <li><img src="./imgs/pix.png" alt="" width="57.78"></li>
+        <li><img src="./imgs/picpay.png" alt="" width="60"></li>
+        <li><img src="./imgs/mastercard.png" alt="" width="25.56"></li>
+        <li><img src="./imgs/visa.png" alt="" width="56.92"></li>
+        <li><img src="./imgs/americanexpress.png" alt="" width="56.92"></li>
+        <li><img src="./imgs/paypal.png" alt="" width="84"></li>
+      </ul>
+    </div>
+    <div class="redesSociais">
+      <ul>
+        <li>
+          <h1>Redes Sociais</h1>
+        </li>
+        <li><img src="./imgs/instagram.png" alt="" width="20"></li>
+        <li><img src="./imgs/facebook.png" alt="" width="20"></li>
+        <li><img src="./imgs/twitter.png" alt="" width="20"></li>
+        <li><img src="./imgs/tiktok.png" alt="" width="20"></li>
+
+      </ul>
+    </div>
+
+  </footer>
+  <div class="copy">Copyright © FagoSports 2024 | Imagens meramente ilustrativas | Design feito por Fabiano Gomes e Pedro | Desenvolvido por Fabiano Gomes e Pedro</div>
+
+
+
+
+  <script type="module" async src="./js/script.js"></script>
+</body>
+
+</html>

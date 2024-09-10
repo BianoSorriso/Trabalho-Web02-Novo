@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+
+
+
+
+#catalogo {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  justify-items: center;
+  margin: 0 auto;
+}
+.catalogo > h1 {
+  text-align: center;
+  font-family: 'Zen Dots', cursive;
+  margin-top: -40px; 
+}
+
+.catalogo > p {
+  text-align: center;
+  font-family: 'Zen Dots', cursive;
+}
+
+.search input,
+.search input:focus {
+  border: 0 none;
+  outline: none;
+  box-shadow: 0 0 0 0;
+  background-color: #d8995a; 
+  margin-left:130px;
+  color: #010101; 
+  
+}
+
+.search {
+  border: 2px solid #cb7c06;
+  display: flex;
+  justify-content: space-between;
+  gap: 75px;
+  width: max-content;
+  border-radius: 10px;
+  padding: 5px 30px;
+  margin-bottom: 30px;
+ 
+  text-align: center; 
+  
+}
+
+.search input::placeholder {
+  color: #282727;
+
+  font-family: 'Zen Dots', cursive;
+  font-size: 0.75rem;
+  margin-left:25px;
+  text-align: center;
+  margin: auto
+}
+
+.icones {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#secaoItens .destaque-itens-item {
+  animation: fade 1s ease-in, toLeft 0.5s ease-in;
+}
+
+#secaoItens .destaque-itens-item::before {
+  display: none;
+}
+
+#iconePesquisa {
+  cursor: pointer;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes toLeft {
+  from {
+    transform: translateX(30px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@media (max-width: 600px) {
+  .filtro button {
+    word-break: keep-all;
+    font-size: 0.875rem;
+    padding: 9px 18px;
+  }
+  .search {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 440px) {
+  .catalogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .filtro {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .search {
+    gap: 20px;
+  }
+  .catalogo > p {
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .catalogo > p {
+    font-size: 0.875rem;
+  }
+}

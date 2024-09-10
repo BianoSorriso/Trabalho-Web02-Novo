@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #ffffff;
+}
+ul {
+  list-style: none;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+
+label {
+  display: block;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+  display: block;
+  cursor: pointer;
+  font-family: inherit;
+  color: inherit;
+  
+}
