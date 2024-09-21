@@ -9,6 +9,7 @@
 #carrinho img {
   cursor: pointer;
   padding: 5px;
+  
 }
 #numero {
   display: flex;
@@ -153,16 +154,12 @@
   
 }
 .img-item {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
+
+
 }
-.img-item img {
-  border-radius: 50%;
-  height: 100%;
-  width: 00%;
-  object-fit: cover;
-  object-position: center;
-}
+
 
 .modal-perfil {
   background-color: #e7a139;
@@ -245,7 +242,7 @@
 .quantidade {
   display: flex;
   align-items: center;
-  gap: 5px;
+  
 }
 
 @media (max-width: 900px) {
@@ -286,3 +283,11 @@
 }
 
 
+.item-carrinho .aumentar,
+.item-carrinho .diminuir {
+    cursor: pointer; 
+    border: 2px solid #858178fd; 
+    width: 20px; /* Defina uma largura fixa */
+    height: 22px; /* Defina uma altura fixa */
+    text-align: center; /* Centraliza o texto *//* Borda vermelha para visualizar */
+}

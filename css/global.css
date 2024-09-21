@@ -17,6 +17,8 @@ a {
 img {
   max-width: 100%;
   display: block;
+  gap:15px;
+  
 }
 
 
