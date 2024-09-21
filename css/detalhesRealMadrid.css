@@ -193,8 +193,8 @@
 .modal-perfil::before {
   content: '';
   display: block;
-  width: 82px;
-  height: 50px;
+  width: 22px;
+  height: 15px;
   background-image: url('../imgs/poligono.svg');
   background-repeat: no-repeat;
   background-size: cover;

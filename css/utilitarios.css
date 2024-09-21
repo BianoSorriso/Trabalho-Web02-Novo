@@ -33,6 +33,7 @@ html {
 .titulo {
   font-family: 'Zen Dots', cursive;
   color: #858178fd;
+  font-size: 15px;
 }
 
 .titulo.grande {
@@ -42,7 +43,7 @@ html {
 
 .titulo.medio {
   font-size: var(--titulo-medio);
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .titulo.pequeno {
@@ -116,6 +117,7 @@ html {
 
 .cor-3 {
   color: #b05b3b;
+
 }
 
 .sb {
