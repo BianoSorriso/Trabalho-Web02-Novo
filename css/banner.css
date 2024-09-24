@@ -4,13 +4,15 @@
   width: 100%;
   height: auto; 
   object-fit: contain; 
- 
+  
   
 }
 .banner {
   position: relative;
  margin-top: 0.50px;
- ;
+  max-width: 100%;
+  height: 390px; /* Defina a altura do banner */
+  overflow: hidden; /* Esconde qualquer parte que saia do container */
   
    
 }
@@ -27,6 +29,9 @@
   left: 25px;
   z-index: 2;
   cursor: pointer;
+
+  
+   
 }
 .setaAnterior img {
   transform: rotateY(180deg);
@@ -41,3 +46,16 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 768px) {
+  .banner {
+      height: auto; 
+  }
+
+  .previous, .next {
+      padding: 5px; 
+  }
+
+  #imagem-banner {
+      object-fit: contain; 
+  }
+}
