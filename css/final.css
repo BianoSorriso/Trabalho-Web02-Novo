@@ -1,0 +1,54 @@
+
+
+body {
+    margin: 0; 
+    padding: 0; 
+}
+
+main {
+    padding: 20px; 
+    margin-bottom: 0; 
+}
+
+.conclusao-compra {
+    
+  
+    text-align: center; 
+    margin: 80px 0;
+}
+
+.detalhes-pedido {
+    font-family: 'Zen Dots', cursive;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .informacoes-contato{
+    font-family: 'Zen Dots', cursive;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  
+  
+  .conclusao-compra a {
+    display: inline-block; 
+    margin-top: 10px; 
+  }
+  
+
+  .botao-retornar {
+    display: inline-block; 
+    padding: 10px 20px;
+    background-color: #d18d3e; 
+    color: white; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    font-family: 'Zen Dots', cursive; 
+    transition: background-color 0.3s; 
+  }
+  
+  .botao-retornar:hover {
+    background-color: #cc9123; 
+  }
+  

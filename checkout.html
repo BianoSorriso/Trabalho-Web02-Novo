@@ -21,61 +21,55 @@
         <h2 class="checkout-header">Concluir Compra</h2>
     
         <form class="checkout-form">
-           
-
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="name">Nome:</label>
-                    <input type="text" id="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" required>
-                </div>
-            </div>
-    
-           
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="address">Endereço:</label>
-                    <input type="text" id="address" required>
-                </div>
-                <div class="form-group">
-                    <label for="card">Número do Cartão:</label>
-                    <input type="text" id="card" required>
-                </div>
-            </div>
-    
-            
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="city">Cidade:</label>
-                    <input type="text" id="city" required>
-                </div>
-                <div class="form-group">
-                    <label for="expiration">Validade:</label>
-                    <input type="text" id="expiration" placeholder="MM/AA" required>
-                </div>
-            </div>
-    
-            
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="zipcode">CEP:</label>
-                    <input type="text" id="zipcode" required>
-                </div>
-                <div class="form-group">
-                    <label for="cvv">CVV:</label>
-                    <input type="text" id="cvv" required>
-                </div>
-            </div>
-    
-            <div class="checkout-actions">
-                <button id="place-order">Finalizar Pedido</button>
-            </div>
-        </form>
-    </div>
-    
+          <div class="form-row">
+              <div class="form-group">
+                  <label for="name">Nome:</label>
+                  <input type="text" id="name">
+              </div>
+              <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" id="email">
+              </div>
+          </div>
+      
+          <div class="form-row">
+              <div class="form-group">
+                  <label for="address">Endereço:</label>
+                  <input type="text" id="address">
+              </div>
+              <div class="form-group">
+                  <label for="card-number">Número do Cartão:</label>
+                  <input type="text" id="card-number">
+              </div>
+          </div>
+      
+          <div class="form-row">
+              <div class="form-group">
+                  <label for="city">Cidade:</label>
+                  <input type="text" id="city">
+              </div>
+              <div class="form-group">
+                  <label for="expiration">Validade:</label>
+                  <input type="text" id="expiration" placeholder="MM/AA">
+              </div>
+          </div>
+      
+          <div class="form-row">
+              <div class="form-group">
+                  <label for="zipcode">CEP:</label>
+                  <input type="text" id="zipcode">
+              </div>
+              <div class="form-group">
+                  <label for="cvv">CVV:</label>
+                  <input type="text" id="cvv">
+              </div>
+          </div>
+      
+          <div class="checkout-actions">
+              <button id="place-order">Finalizar Pedido</button>
+          </div>
+      </form>
+</div>      
     
 
     <footer>
@@ -131,6 +125,9 @@
       <div class="copy">Copyright © FagoSports 2024 | Imagens meramente ilustrativas | Design feito por Fabiano Gomes | Desenvolvido por Fabiano Gomes e Pedro </div>
     
 
-    <script src="./js/checkout.js"></script>
+      <script src="./js/modules/checkout.js"></script>
+
+
+
 </body>
 </html>
