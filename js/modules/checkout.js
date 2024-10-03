@@ -1,10 +1,12 @@
-// Captura o evento de clique no botão "Finalizar Pedido"
-document.getElementById('place-order').addEventListener('click', function(event) {
-    event.preventDefault(); // Previne o comportamento padrão do botão
+const emailInput = document.getElementById('email');
+const envelopeIcon = document.getElementById('envelope-icon');
 
-    // Debug: log para confirmar que o botão foi clicado
-    console.log("Botão 'Finalizar Pedido' clicado.");
+emailInput.addEventListener('focus', () => {
+    envelopeIcon.classList.add('hidden'); // Esconde o ícone quando o campo é focado
+});
 
-    // Redireciona diretamente para a página de sucesso
-    window.location.href = 'success.html'; // Altere para o nome da sua página de teste, se necessário
+emailInput.addEventListener('blur', () => {
+    if (emailInput.value === '') {
+        envelopeIcon.classList.remove('hidden'); // Mostra o ícone se o campo estiver vazio
+    }
 });

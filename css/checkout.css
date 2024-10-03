@@ -189,3 +189,8 @@ button#place-order:hover {
     }
   }
   
+  input[type="email"] {
+    padding-left: 50px; /* Ajuste o valor conforme necessário para que o cursor inicie após a cartinha */
+}
+
+

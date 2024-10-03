@@ -61,8 +61,28 @@ nav {
     justify-items: center;
     gap: 15px;
   }
-  .menu {
-    justify-self: center;
-  }
+  
 }
 
+/* Estilos para o menu no index.html */
+.menu {
+  display: flex;
+  align-items: center; 
+  margin-left: 50px;
+}
+
+/* Estilos específicos para o ícone do carrinho no index */
+.menu img {
+  margin-top: 5px;
+  
+}
+
+#carrinho {
+  margin-left: 10px; /* Mantém o espaço desejado entre o carrinho e a imagem do perfil */
+}
+
+.perfil-img {
+  width: 40px; /* Ajuste para o tamanho desejado */
+  height: auto; /* Mantém a proporção */
+  margin-left: 4px; /* Ajuste este valor para mover a imagem para a esquerda */
+}

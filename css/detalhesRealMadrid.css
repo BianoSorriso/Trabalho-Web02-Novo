@@ -214,9 +214,13 @@
   bottom: -170px;
   z-index: 1;
   transition: 300ms;
-
-  
+  display: none;  
 }
+
+.modal-carrinho:not(.hidden) {
+  display: block;
+}
+
 .modal-carrinho::before {
   content: '';
   display: block;
@@ -291,3 +295,77 @@
     height: 22px; /* Defina uma altura fixa */
     text-align: center; /* Centraliza o texto *//* Borda vermelha para visualizar */
 }
+
+
+
+
+.botao-prosseguir {
+  position: absolute;
+  bottom: 10px; /* Mantém o botão na parte inferior */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 12px;
+  background-color: #e2834c;
+  color: rgb(5, 5, 5);
+  text-decoration: none;
+  border-radius: 5px;
+  font-family: 'Zen Dots', cursive;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.botao-prosseguir.hidden {
+  display: none; /* Botão escondido quando o carrinho está vazio */
+}
+
+.botao-prosseguir:not(.hidden) {
+  display: inline-block; /* Exibe o botão quando há itens no carrinho */
+}
+
+.quantidade {
+  margin-right: 25px; /* Ajuste o valor conforme necessário */
+  display: flex;
+  align-items: center;
+}
+
+.quantidade button {
+  background-color: #e0e0e0;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #333;
+  border-radius: 3px;
+  margin: 0 5px;
+  width: 40px; /* Ajuste o tamanho conforme necessário */
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilo para o botão de aumentar */
+.aumentar {
+  background-color: #e0e0e0; /* Cor padrão para aumentar */
+}
+
+.aumentar:hover {
+  background-color: #4CAF50; /* Verde para aumentar */
+  color: white;
+}
+
+/* Estilo para o botão de diminuir */
+.diminuir {
+  background-color: #e0e0e0; /* Cor padrão para diminuir */
+}
+
+.diminuir:hover {
+  background-color: #d00000; /* Vermelho para diminuir */
+  color: white;
+}
+
+.quantidade #numeroQtd {
+  font-size: 18px;
+  margin: 0 10px;
+}
+

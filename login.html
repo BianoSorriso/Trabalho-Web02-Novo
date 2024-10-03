@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-  <link rel="preloud" href="./css/style.css" as="style">
+  <link rel="preload" href="./css/style.css" as="style">
   <link rel="stylesheet" href="./css/style.css">
   <title>Login</title>
 </head>
@@ -16,33 +16,40 @@
   <div class="logo">
     <a href="./index.html"><img src="./imgs/Logo.svg" alt=""></a>
   </div>
-  <form action="" method="POST">
+  <form id="loginForm">
     <h1 class="titulo">Faça seu login para<br> continuar</h1>
 
     <div class="bnt-google">
-
       <img src="./imgs/google.svg" alt="">
       <a href="/" class="titulo">Entrar com Google</a>
-
     </div>
 
     <p class="titulo ou">Ou</p>
 
-    <input type="email" name="email" id="email" placeholder="Email" autocomplete="off">
-    <input type="password" name="senha" id="senha" placeholder="Senha" autocomplete="off">
+    <input type="email" name="email" id="email" placeholder="Email" autocomplete="off" required>
+    <input type="password" name="senha" id="senha" placeholder="Senha" autocomplete="off" required>
     <a href="./recuperarSenha.html" class="sub-titulo">Esqueceu sua senha?</a>
     <div class="bnt-entrar">
-      <a href="./index.html">Entrar</a>
+      <button type="submit">Entrar</button>
     </div>
     <a href="./cadastro.html" class="sub-titulo linkCadastro">Não tem uma conta?<span class="titulo"> Cadastre-se</span></a>
   </form>
 
+  <script>
+    // Captura o formulário de login
+    const loginForm = document.getElementById('loginForm');
 
+    // Adiciona um evento ao formulário
+    loginForm.addEventListener('submit', function(event) {
+      event.preventDefault(); // Impede o envio padrão do formulário
 
+      // Simula o login e salva o estado no localStorage
+      localStorage.setItem('loggedIn', true);
 
-
-
-
+      // Redireciona para a página principal (index)
+      window.location.href = './index.html';
+    });
+  </script>
 
   <script src="./js/modules/login.js"></script>
 </body>
