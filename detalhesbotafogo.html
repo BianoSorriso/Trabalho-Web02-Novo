@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Camisa Botafogo</title>
+  <link rel="icon" href="./imgs/favicon.svg" type="image/svg+xml">
+  <meta name="description" content="Energia e desempenho para todos os níveis e esportes.">
+
+  <style>
+    /* Estilos para o carrossel */
+    .img-produto {
+      position: relative;
+      width: 100%;
+      max-width: 500px;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .slide {
+      width: 100%;
+      display: none; /* Esconde todas as imagens */
+    }
+
+    .slide.active {
+      display: block; /* Mostra apenas a imagem ativa */
+    }
+
+    /* Botões de navegação */
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  </style>
+
+</head>
+
+<body id="detalhes">
+  <header>
+    <nav aria-label="primaria">
+      <div class="voltar">
+        <a href="./index.html">
+          <img src="./imgs/arrow.svg" alt="">
+        </a>
+        <h1 class="titulo cor-0 b"><a href="./index.html">Voltar</a></h1>
+
+      </div>
+
+      <div class="logo">
+        <a href="./"><img src="./imgs/Logo.svg" alt="logo" width="253" height="34"></a>
+      </div>
+      <div class="menu">
+        <div id="carrinho">
+          <div class="modal-carrinho hidden">
+            <h1 class=" titulo cor-3">Carrinho está vazio</h1>
+            
+            
+            <div class="cart-actions">              
+            </div>
+            
+          </div>
+          <span id="numero">0</span>
+          <img src="./imgs/cart.svg" alt="">
+        </div>
+        <div class="perfil">
+          <div class="bg-perfil">
+            <div class="modal-perfil hidden">
+              <div class="perfil">
+                <img src="./imgs/user-circle.svg" alt="">
+                <h1 class="titulo cor-3 medio" cor-3>Meu perfil</h1>
+              </div>
+
+              <div class="logout">
+                <img src="./imgs/logout.svg" alt="">
+                <h1 class="titulo alert medio">Sair</h1>
+              </div>
+            </div>
+            <img src="./imgs/FotoPerfil.svg" alt="">
+          </div>
+
+         
+      </div>
+    </nav>
+  </header>
+
+  <div class="detalhes">
+
+    <div class="img-produto">
+      <img src="./imgs/CAMISABOTAFOGO02.jpg" alt="Camisa Botafogo - Frente" class="slide active">
+      <img src="./imgs/ISA04.jpg" alt="Camisa Botafogo - Costas" class="slide">
+      <img src="./imgs/ISA02.jpg" alt="Camisa Botafogo - Lateral" class="slide">
+    
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </div>
+    
+
+    <div class="conteudo-produto">
+      <span class="titulo b cor-1 sm">CAMISAS</span>
+      <h1 class="titulo big" id="produtoNome">Camisa Botafogo 21/22</h1>
+
+      <p class="titulo cor-0 md rg" id="corpoTexto">Camisa</p>
+      <p class="titulo md" id="peso"> </p>
+      <div class="preco">
+        <p class="titulo cor-0 grande">R$ 508,00</p>
+      </div>
+      <div class="tamanhos">
+        <button class="tamanho-btn">P</button>
+        <button class="tamanho-btn">M</button>
+        <button class="tamanho-btn">G</button>
+        <button class="tamanho-btn">GG</button>
+      </div>
+      <button class="addCarrinho btn cor-3 sb" data-type="camisa">Adicionar ao carrinho</button>
+
+    </div>
+
+  </div>
+
+
+  <footer>
+    <div class="minhaConta">
+      <ul>
+        <li>
+          <h1>Minha Conta</h1>
+        </li>
+        <li><a href="">Minha Conta</a></li>
+        <li><a href="">Meus Pedidos</a></li>
+        <li><a href="">Pagamentos</a></li>
+      </ul>
+    </div>
+    <div class="institucional">
+      <ul>
+
+        <li>
+          <h1>Institucional</h1>
+        </li>
+        <li><a href="">História</a></li>
+        <li><a href="">Depoimentos</a></li>
+        <li><a href="">Código do Consumidor</a></li>
+        <li><a href="">Política de Privacidade</a></li>
+      </ul>
+    </div>
+    <div class="meiosPagamentos">
+      <ul>
+        <li>
+          <h1>Meios de Pagamento</h1>
+        </li>
+        <li><img src="./imgs/pix.png" alt="" width="57.78"></li>
+        <li><img src="./imgs/picpay.png" alt="" width="60"></li>
+        <li><img src="./imgs/mastercard.png" alt="" width="25.56"></li>
+        <li><img src="./imgs/visa.png" alt="" width="56.92"></li>
+        <li><img src="./imgs/americanexpress.png" alt="" width="56.92"></li>
+        <li><img src="./imgs/paypal.png" alt="" width="84"></li>
+      </ul>
+    </div>
+    <div class="redesSociais">
+      <ul>
+        <li>
+          <h1>Redes Sociais</h1>
+        </li>
+        <li><img src="./imgs/instagram.png" alt="" width="20"></li>
+        <li><img src="./imgs/facebook.png" alt="" width="20"></li>
+        <li><img src="./imgs/twitter.png" alt="" width="20"></li>
+        <li><img src="./imgs/tiktok.png" alt="" width="20"></li>
+
+      </ul>
+    </div>
+
+  </footer>
+  <div class="copy">Copyright © FagoSports 2024 | Imagens meramente ilustrativas | Design feito por Fabiano Gomes, Isabel Siqueira e Matheus | Desenvolvido por Fabiano Gomes, Isabel Siqueira e Matheus</div>
+
+
+
+
+
+
+  <script src="./js/modules/carrinho.js">
+  </script>
+
+
+<script>
+  let slideIndex = 0;
+  const slides = document.querySelectorAll('.img-produto .slide');
+  const prevButton = document.querySelector('.prev');
+  const nextButton = document.querySelector('.next');
+
+  
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active');
+      if (i === index) {
+        slide.classList.add('active');
+      }
+    });
+  }
+
+  
+  function nextSlide() {
+    slideIndex = (slideIndex + 1) % slides.length; 
+    showSlide(slideIndex);
+  }
+
+  
+  function prevSlide() {
+    slideIndex = (slideIndex - 1 + slides.length) % slides.length; 
+    showSlide(slideIndex);
+  }
+
+  
+  nextButton.addEventListener('click', nextSlide);
+  prevButton.addEventListener('click', prevSlide);
+
+  
+  showSlide(slideIndex);
+</script>
+  
+
+
+
+</body>
+
+</html>

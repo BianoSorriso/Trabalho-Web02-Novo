@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (document.querySelector('.item-carrinho')) {
                 atualizarQuantidadeEValor(); // Atualiza a quantidade e o valor
             } else {
+                
                 // Adiciona o item ao modal
                 modal_carrinho.innerHTML = `
                     <div class="item-carrinho">
@@ -89,23 +90,23 @@ document.addEventListener('DOMContentLoaded', () => {
                     <button class="botao-prosseguir">Prosseguir</button>
                 `;
 
-                // Adiciona eventos para os botões de aumentar e diminuir
+               
                 adicionaEventoQuantidade();
 
-                // Adiciona evento ao botão "Prosseguir" após sua criação
+               
                 adicionarEventoBotaoProsseguir();
             }
 
             // Atualiza a quantidade e valor total
             atualizarQuantidadeEValor();
 
-            // Armazenar no localStorage
+            // SALVANDO NA MEMÓRIA PARA USAR NA PÁGINA FINAL
             localStorage.setItem('quantidadeTotal', quantidadeTotal);
             const precoProduto = (tipoProduto === 'camisa') ? precoUnitarioCamisa : precoUnitarioTenis;
             const novoTotal = quantidadeTotal * precoProduto;
             localStorage.setItem('precoTotal', novoTotal.toFixed(2).replace('.', ','));
 
-            // Armazenar os dados do produto no localStorage
+           
             localStorage.setItem('produtoImagem', imgItem);
             localStorage.setItem('produtoTipo', tipoProduto);
             localStorage.setItem('produtoPreco', precoProduto);
@@ -118,31 +119,33 @@ document.addEventListener('DOMContentLoaded', () => {
             const precoProduto = (tipoProduto === 'camisa') ? precoUnitarioCamisa : precoUnitarioTenis;
 
             // Atualiza a quantidade na caixa e o valor total
-            numeroQtd.innerHTML = quantidadeTotal; // Sincroniza a quantidade na caixa
+            numeroQtd.innerHTML = quantidadeTotal; 
             const novoTotal = quantidadeTotal * precoProduto;
             document.getElementById('precoTotal').innerHTML = `R$ ${novoTotal.toFixed(2).replace('.', ',')}`;
 
             // Atualiza o número total de itens no carrinho
-            quantidadeCarrinho.innerHTML = quantidadeTotal; // Atualiza o número do carrinho
+            quantidadeCarrinho.innerHTML = quantidadeTotal; 
         }
 
+
+         // função  SOMA e DIMINUI QUANTO ITENS TEM
         function acrescentaItens() {
-            quantidadeTotal++; // Incrementa o total de itens
+            quantidadeTotal++; 
             atualizarQuantidadeEValor();
         }
 
         function retiraItens() {
             if (quantidadeTotal > 1) {
-                quantidadeTotal--; // Diminui o total de itens
+                quantidadeTotal--; 
                 atualizarQuantidadeEValor();
             } else {
-                quantidadeTotal = 0; // Reseta a quantidade total de itens
+                quantidadeTotal = 0; 
                 carrinhoVazio();
             }
         }
 
         function carrinhoVazio() {
-            quantidadeCarrinho.innerHTML = 0; // Reseta o número do carrinho
+            quantidadeCarrinho.innerHTML = 0; 
             modal_carrinho.innerHTML = `<h1 class="titulo cor-3">Carrinho está vazio</h1>`;
         }
 
@@ -159,22 +162,23 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // Função para adicionar o evento ao botão "Prosseguir"
+         //função para CLICAR EM PROSSEGUIR E CONTINUAR 
+
         function adicionarEventoBotaoProsseguir() {
             const botaoProsseguir = document.querySelector('.botao-prosseguir');
             if (botaoProsseguir) {
                 botaoProsseguir.addEventListener('click', () => {
-                    // Salva os dados do carrinho no localStorage
+                    
                     localStorage.setItem('quantidadeCarrinho', quantidadeTotal);
 
-                    // Ação desejada ao clicar no botão Prosseguir
+                    
                     alert('Redirecionando para a página de pagamento...');
                     window.location.href = 'checkout.html'; 
                 });
             }
         }
 
-        // Event listeners
+       
         if (bodyDetalhes) {
             btnAddCarrinho.addEventListener('click', adicionarItenCarrinho);
             icone_carrinho.addEventListener('click', showModal);

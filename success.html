@@ -35,8 +35,8 @@
       <h2>Detalhes do Pedido:</h2>
       <ul id="pedido-details">
         <li><strong>Produto:</strong> <span id="produtoNomeExibido"></span></li>
-        <li><strong>Quantidade:</strong> <span id="quantidade"></span></li> <!-- Atualizado para 'quantidade' -->
-        <li><strong>Preço:</strong> <span id="precoTotal"></span></li> <!-- Atualizado para 'precoTotal' -->
+        <li><strong>Quantidade:</strong> <span id="quantidade"></span></li> 
+        <li><strong>Preço:</strong> <span id="precoTotal"></span></li> 
       </ul>
     </div>
     <div class="informacoes-contato">
@@ -90,12 +90,13 @@
   <div class="copy">Copyright © FagoSports 2024 | Imagens meramente ilustrativas | Design feito por Fabiano Gomes | Desenvolvido por Fabiano Gomes</div>
 
   <script type="module" async>
-    // Verifica se o usuário está logado
+    // VERIFICAR SE O USUARIO ESTÁ LOGAGO
+
     const isLoggedIn = localStorage.getItem('loggedIn');
     const menu = document.querySelector('.menu');
 
     if (isLoggedIn) {
-      // Código do cabeçalho logado
+      // CABECALHO LOGADO
       menu.innerHTML = `
         <div id="carrinho">
           <div class="modal-carrinho hidden">
@@ -122,7 +123,10 @@
         </div>
       `;
 
-      // Adiciona o evento de clique na imagem do perfil para mostrar/ocultar o dropdown
+      // CLICAR NA ICONE DO PERFIL PARA MOSTRAR E OCULTAR O DROPDOWN
+
+
+
       const perfilImg = document.getElementById('perfilImg');
       const modalPerfil = document.querySelector('.modal-perfil');
 
@@ -130,7 +134,7 @@
         modalPerfil.classList.toggle('hidden');
       });
 
-      // Função de logout
+      // LOGOUT
       const logoutLink = document.getElementById('logoutLink');
       if (logoutLink) {
         logoutLink.addEventListener('click', function() {
@@ -139,7 +143,7 @@
         });
       }
     } else {
-      // Código do cabeçalho deslogado
+      // CABEÇALHO DESLOGADO
       menu.innerHTML = `
         <img src="./imgs/cart.svg" alt="">
         <a href="./login.html" class="login">Faça seu login</a>
@@ -147,27 +151,24 @@
     }
 
     
-    // Recupera os detalhes do pedido do localStorage
-    
-    // Recupera os detalhes do pedido do localStorage
-    // Recupera o nome do produto armazenado no localStorage
+    //RECUPERA OS DETALHES DO PEDIDO DA MEMÓRIA
 
-// Recupera o nome do produto do localStorage
 const produtoNomeExibido = localStorage.getItem('produtoNome');
 
-// Exibe o nome do produto na página de compra concluída
 
 
-    // Recupera o nome do produto do localStorage
-// Recupera o nome do produto do localStorage
-document.querySelector('#produtoNomeExibido').textContent = produtoNomeExibido || 'Camisa Real Madrid - Home';
+//EXIBIR O NOME DO PRODUTO
+
+   //RECUPERAR O NOME DO PRODUTO DA MEMÓRIA
+
+document.querySelector('#produtoNomeExibido').textContent = produtoNomeExibido || 'Camisa Botafogo - 21/22';
 
 
 
-const quantidadeTotal = localStorage.getItem('quantidadeTotal'); // Usar a mesma chave que você quer
-    const precoTotal = localStorage.getItem('precoTotal'); // Usar a mesma chave que você quer
+const quantidadeTotal = localStorage.getItem('quantidadeTotal'); // 
+    const precoTotal = localStorage.getItem('precoTotal'); // Usar a 
 
-    // Preenche os detalhes do pedido na página
+    
     
  
 
@@ -175,24 +176,24 @@ const quantidadeTotal = localStorage.getItem('quantidadeTotal'); // Usar a mesma
     document.getElementById('precoTotal').textContent = precoTotal ? `R$ ${parseFloat(precoTotal).toFixed(2).replace('.', ',')}` : 'R$ 0,00'; 
     
     
-    // Atualizado para usar a chave correta
+    
 
   </script>
 
   <style>
-    /* Estilo para esconder elementos */
+    
     .hidden {
       display: none;
     }
 
-    /* Estilo para o carrinho e o perfil */
+    
     #carrinho,
     .perfil {
       position: relative;
       cursor: pointer;
       display: flex;
-      align-items: center; /* Alinha os itens verticalmente */
-      margin-right: 20px; /* Espaço à direita para evitar encostar */
+      align-items: center; 
+      margin-right: 20px; 
     }
 
     .modal-carrinho {
@@ -200,9 +201,9 @@ const quantidadeTotal = localStorage.getItem('quantidadeTotal'); // Usar a mesma
       right: -10px;
     }
 
-    /* Evita overflow na página */
+    
     body {
-      overflow-x: hidden; /* Impede a rolagem horizontal */
+      overflow-x: hidden; 
     }
   </style>
 
