@@ -59,7 +59,7 @@ function pesquisarItem() {
     }
   });
 
-  nomeDoces.forEach((produtos) => {
+  nomeProdutos.forEach((produtos) => {
     if (texto != '') {
       if (!produtos.innerHTML.toLowerCase().includes(texto)) {
        produtos.parentElement.classList.add('hidden');
@@ -73,3 +73,5 @@ function pesquisarItem() {
 }
 
 searchInput.addEventListener('keyup', pesquisarItem);
+
+
