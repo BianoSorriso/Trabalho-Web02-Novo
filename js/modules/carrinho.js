@@ -29,8 +29,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const modal_perfil = document.querySelector('.modal-perfil');
         const icone_carrinho = document.querySelector('#carrinho img');
         const icone_perfil = document.querySelector('.bg-perfil');
+        
         const precoUnitarioCamisa = 508;
         const precoUnitarioTenis = 379;
+        const precoUnitarioCamisaBotafogo = 297;
+        
         let quantidadeTotal = 0; // Total de itens no carrinho
         let quantidadeDoItem = 1; // Quantidade do item atual (sempre inicia com 1)
 
@@ -117,9 +120,15 @@ document.addEventListener('DOMContentLoaded', () => {
                        
             localStorage.setItem('produtoNome', nomeProduto);
             localStorage.setItem('quantidadeTotal', quantidadeTotal);
-            const precoProduto = (tipoProduto === 'camisa') ? precoUnitarioCamisa : precoUnitarioTenis;
-            const novoTotal = quantidadeTotal * precoProduto;
-            localStorage.setItem('precoTotal', novoTotal.toFixed(2).replace('.', ','));
+
+            const precoProduto = tipoProduto === 'camisabotafogo' ? precoUnitarioCamisaBotafogo :
+            tipoProduto === 'camisa' ? precoUnitarioCamisa :
+            precoUnitarioTenis;
+           
+            
+
+    const novoTotal = quantidadeTotal * precoProduto;
+    localStorage.setItem('precoTotal', novoTotal.toFixed(2).replace('.', ','));
 
            
             localStorage.setItem('produtoImagem', imgItem);
@@ -134,8 +143,12 @@ document.addEventListener('DOMContentLoaded', () => {
              
 
         function atualizarQuantidadeEValor() {
+            
             const numeroQtd = document.getElementById('numeroQtd');
-            const precoProduto = (tipoProduto === 'camisa') ? precoUnitarioCamisa : precoUnitarioTenis;
+            
+            const precoProduto = tipoProduto === 'camisabotafogo' ? precoUnitarioCamisaBotafogo :
+                         tipoProduto === 'camisa' ? precoUnitarioCamisa :
+                         precoUnitarioTenis;
 
             // Atualiza a quantidade na caixa e o valor total
             numeroQtd.innerHTML = quantidadeTotal; 
@@ -149,7 +162,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
         function atualizarLocalStorage() {
-            const precoProduto = (tipoProduto === 'camisa') ? precoUnitarioCamisa : precoUnitarioTenis;
+           
+            const precoProduto = tipoProduto === 'camisabotafogo' ? precoUnitarioCamisaBotafogo :
+            tipoProduto === 'camisa' ? precoUnitarioCamisa :
+            precoUnitarioTenis;
+
+
+
             const novoTotal = quantidadeTotal * precoProduto;
             localStorage.setItem('quantidadeTotal', quantidadeTotal);
             localStorage.setItem('precoTotal', novoTotal.toFixed(2).replace('.', ','));

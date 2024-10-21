@@ -26,8 +26,8 @@
 
     <p class="titulo ou">Ou</p>
 
-    <input type="email" name="email" id="email" placeholder="Email" autocomplete="off" required>
-    <input type="password" name="senha" id="senha" placeholder="Senha" autocomplete="off" required>
+    <input type="email" name="email" id="username" placeholder="Email" autocomplete="off" required>
+    <input type="password" name="senha" id="password" placeholder="Senha" autocomplete="off" required>
     <a href="./recuperarSenha.html" class="sub-titulo">Esqueceu sua senha?</a>
     <div class="bnt-entrar">
       <button type="submit">Entrar</button>
@@ -35,20 +35,41 @@
     <a href="./cadastro.html" class="sub-titulo linkCadastro">Não tem uma conta?<span class="titulo"> Cadastre-se</span></a>
   </form>
 
+
+  <!-----CODIGO PARA VALIDAR A SENHA --->
+
   <script>
-    // Captura o formulário de login
-    const loginForm = document.getElementById('loginForm');
+   
+   const loginForm = document.getElementById('loginForm');
 
-    // Adiciona um evento ao formulário
-    loginForm.addEventListener('submit', function(event) {
-      event.preventDefault(); // Impede o envio padrão do formulário
 
-      // Simula o login e salva o estado no localStorage
-      localStorage.setItem('loggedIn', true);
+loginForm.addEventListener('submit', function(event) {
+  event.preventDefault(); 
 
-      // Redireciona para a página principal (index)
-      window.location.href = './index.html';
-    });
+  
+  const usuarioPermitido = 'Thereza@Web02'; 
+  const senhaPermitida = 'Thereza'; 
+
+  
+  const usuarioInput = document.getElementById('username').value;
+  const senhaInput = document.getElementById('password').value;
+
+  
+  if (usuarioInput === usuarioPermitido && senhaInput === senhaPermitida) {
+    
+    localStorage.setItem('loggedIn', 'true');
+
+   
+    window.location.href = './index.html';
+  } else {
+    
+    alert('Nome de usuário ou senha incorretos.'); 
+  }
+});
+
+
+
+
   </script>
 
   <script src="./js/modules/login.js"></script>

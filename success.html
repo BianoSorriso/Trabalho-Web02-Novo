@@ -87,7 +87,7 @@
     </div>
   </footer>
   
-  <div class="copy">Copyright © FagoSports 2024 | Imagens meramente ilustrativas | Design feito por Fabiano Gomes | Desenvolvido por Fabiano Gomes</div>
+  <div class="copy">Copyright © FagoSports 2024 | Imagens meramente ilustrativas | Design feito por Fabiano, Bel Siqueira e Mateus Dias | Desenvolvido por Fabiano, Bel Siqueira e Matheus Dias</div>
 
   <script type="module" async>
     // VERIFICAR SE O USUARIO ESTÁ LOGAGO
@@ -171,7 +171,8 @@ const quantidadeTotal = localStorage.getItem('quantidadeTotal'); //
     
  
 
-    document.getElementById('quantidade').textContent = quantidadeTotal || '0'; // Atualizado para usar a chave correta
+    document.getElementById('quantidade').textContent = quantidadeTotal || '0'; 
+    
     document.getElementById('precoTotal').textContent = precoTotal ? `R$ ${parseFloat(precoTotal).toFixed(2).replace('.', ',')}` : 'R$ 0,00'; 
     
     
