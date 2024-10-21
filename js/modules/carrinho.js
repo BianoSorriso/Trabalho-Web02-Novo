@@ -57,17 +57,30 @@ document.addEventListener('DOMContentLoaded', () => {
             modal_perfil.classList.toggle('hidden');
         }
 
+       
         function adicionarItenCarrinho() {
+          
+
             imgItem = document.querySelector('.img-produto > img').src;
             preco = document.querySelector('.preco > p').innerHTML;
+              
+            const nomeProduto = document.querySelector('#produtoNome').innerText; // Aqui usamos o ID
+
 
             // Define o tipo de produto
             tipoProduto = btnAddCarrinho.getAttribute('data-type');
 
+           
+           
+
             // Incrementa apenas 1 no total de itens
             quantidadeTotal += 1;
-
+           
             // Se o carrinho já possui itens, apenas atualiza o modal
+
+            
+
+
             if (document.querySelector('.item-carrinho')) {
                 atualizarQuantidadeEValor(); // Atualiza a quantidade e o valor
             } else {
@@ -101,6 +114,8 @@ document.addEventListener('DOMContentLoaded', () => {
             atualizarQuantidadeEValor();
 
             // SALVANDO NA MEMÓRIA PARA USAR NA PÁGINA FINAL
+                       
+            localStorage.setItem('produtoNome', nomeProduto);
             localStorage.setItem('quantidadeTotal', quantidadeTotal);
             const precoProduto = (tipoProduto === 'camisa') ? precoUnitarioCamisa : precoUnitarioTenis;
             const novoTotal = quantidadeTotal * precoProduto;
@@ -112,7 +127,11 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('produtoPreco', precoProduto);
         }
 
-      
+
+
+
+        ///FINAL DO CÓDIGO ATUALIZA CARRINHO
+             
 
         function atualizarQuantidadeEValor() {
             const numeroQtd = document.getElementById('numeroQtd');
@@ -128,16 +147,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
 
+
+        function atualizarLocalStorage() {
+            const precoProduto = (tipoProduto === 'camisa') ? precoUnitarioCamisa : precoUnitarioTenis;
+            const novoTotal = quantidadeTotal * precoProduto;
+            localStorage.setItem('quantidadeTotal', quantidadeTotal);
+            localStorage.setItem('precoTotal', novoTotal.toFixed(2).replace('.', ','));
+        }
+
          // função  SOMA e DIMINUI QUANTO ITENS TEM
         function acrescentaItens() {
             quantidadeTotal++; 
             atualizarQuantidadeEValor();
+            atualizarLocalStorage();
         }
 
         function retiraItens() {
             if (quantidadeTotal > 1) {
                 quantidadeTotal--; 
                 atualizarQuantidadeEValor();
+                atualizarLocalStorage();
             } else {
                 quantidadeTotal = 0; 
                 carrinhoVazio();
@@ -188,3 +217,22 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+// Função separada para capturar e salvar o nome do produto na MEMÓRIA
+function salvarNomeProduto() {
+   
+    
+
+
+    const nomeProduto = document.querySelector('.nome-produto').textContent;
+
+    // SALVA O NOME DO PRODUTO
+
+
+    localStorage.setItem('produtoNome', nomeProduto);
+}
+
+
+
+window.onload = function() {
+    salvarNomeProduto();
+}
