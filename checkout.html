@@ -24,11 +24,11 @@
         <div class="form-row">
             <div class="form-group">
                 <label for="name">Nome:</label>
-                <input type="text" id="name" requi autocomplete="on">
+                <input type="text" id="name" required autocomplete="on">
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" id="email" requi autocomplete="on">
+                <input type="email" id="email" required autocomplete="on">
               
             </div>
         </div>
@@ -36,33 +36,33 @@
         <div class="form-row">
             <div class="form-group">
                 <label for="address">Endereço:</label>
-                <input type="text" id="address" requi autocomplete="on">
+                <input type="text" id="address" required autocomplete="on">
             </div>
             <div class="form-group">
                 <label for="card-number">Número do Cartão:</label>
-                <input type="text" id="card-number" requ autocomplete="on">
+                <input type="text" id="card-number" required autocomplete="on">
             </div>
         </div>
     
         <div class="form-row">
             <div class="form-group">
                 <label for="city">Cidade:</label>
-                <input type="text" id="city" requi autocomplete="on">
+                <input type="text" id="city" required autocomplete="on">
             </div>
             <div class="form-group">
                 <label for="expiration">Validade:</label>
-                <input type="text" id="expiration" placeholder="MM/AA" requi autocomplete="on">
+                <input type="text" id="expiration" placeholder="MM/AA" required autocomplete="on">
             </div>
         </div>
     
         <div class="form-row">
             <div class="form-group">
                 <label for="zipcode">CEP:</label>
-                <input type="text" id="zipcode" requi autocomplete="on">
+                <input type="text" id="zipcode" required autocomplete="on">
             </div>
             <div class="form-group">
                 <label for="cvv">CVV:</label>
-                <input type="text" id="cvv" requi autocomplete="on">
+                <input type="text" id="cvv" required autocomplete="on">
             </div>
         </div>
     
@@ -130,7 +130,8 @@
             form.addEventListener('submit', function(event) {
                 event.preventDefault(); // Impede o envio padrão
 
-                // Captura os valores dos campos do formulário
+                // PEGA OS VALORES DO FORMULÁRIO
+
                 const nome = document.getElementById('name').value;
                 const email = document.getElementById('email').value;
                 const endereco = document.getElementById('address').value;
@@ -140,7 +141,8 @@
                 const cep = document.getElementById('zipcode').value;
                 const cvv = document.getElementById('cvv').value;
 
-                // Armazenar os dados no localStorage (opcional)
+                // SALVA OS VALORES DO FORMULÁRIO 
+
                 localStorage.setItem('nome', nome);
                 localStorage.setItem('email', email);
                 localStorage.setItem('endereco', endereco);
@@ -150,7 +152,7 @@
                 localStorage.setItem('cep', cep);
                 localStorage.setItem('cvv', cvv);
 
-                // Redirecionar para a página de sucesso
+                // ENCAMINHA PARA PÁGINA FINAL
                 window.location.href = 'success.html';
             });
         });
