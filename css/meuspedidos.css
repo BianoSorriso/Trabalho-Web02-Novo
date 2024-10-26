@@ -1,0 +1,63 @@
+/* Estilos específicos para a página Meus Pedidos */
+
+/* Fonte Zen Dots apenas nos elementos desta página */
+.titulo, .pedido-item span, .btn-detalhes, .pedido-detalhes li {
+  font-family: 'Zen Dots', sans-serif;
+}
+
+/* Estrutura e estilo da página */
+body {
+  background-color: #f4f4f9;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+
+
+/* Estilo dos itens de pedido */
+.pedido-item {
+  border-bottom: 1px solid #ddd;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pedido-detalhes {
+  display: none;
+  padding: 10px;
+  background-color: #fafafa;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.btn-detalhes {
+  padding: 8px 16px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-detalhes:hover {
+  background-color: #56b849;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  font-size: 16px;
+  color: #333;
+}

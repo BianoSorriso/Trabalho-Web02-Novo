@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/meus-pedidos.css">
+  <title>Meus Pedidos</title>
+</head>
+
+<body>
+
+  <header>
+
+
+    <nav aria-label="primaria">
+      <div class="logo">
+        <a href="./"><img src="./imgs/Logo.svg" alt="logo Fago" width="253" height="34"></a>
+      </div>
+      <div class="menu" id="menu">
+        
+        <img src="./imgs/cart.svg" alt="Carrinho">
+        <span id="numero">0</span>
+        <a href="./login.html" class="login">Faça seu login</a>
+       
+      </div>
+    </nav>
+
+    
+  </header>
+
+  
+
+  <script>
+    
+    // Verifica se o usuário está logado
+    const isLoggedIn = localStorage.getItem('loggedIn');
+    
+    const menu = document.getElementById('menu');
+    
+    if (isLoggedIn) {
+      // Código do cabeçalho logado
+      menu.innerHTML = `
+        
+      <div class="menu">
+      <div id="carrinho">
+        <div class="modal-carrinho hidden">
+          <h1 class="titulo cor-3">Carrinho está vazio</h1>
+          <div class="cart-actions"></div>
+        </div>
+        <span id="numero">0</span>
+        <img src="./imgs/cart.svg" alt="Carrinho">
+      </div>
+    
+      <div class="perfil">
+        <div class="bg-perfil">
+          <img src="./imgs/FotoPerfil.svg" alt="" class="perfil-img">
+          <div class="modal-perfil hidden">
+            <div class="perfil">
+              <img src="./imgs/user-circle.svg" alt="">
+              <h1 class="titulo cor-3 medio">Meu perfil</h1>
+            </div>
+            <div class="logout">
+              <img src="./imgs/logout.svg" alt="">
+              <h1 class="titulo alert medio" id="logoutLink">Sair</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+      `;
+    
+      // Adiciona a lógica de click pro dropdown
+      const bgPerfil = document.querySelector('.bg-perfil');
+      const modalPerfil = document.querySelector('.modal-perfil');
+    
+      bgPerfil.addEventListener('click', () => {
+        modalPerfil.classList.toggle('hidden'); // Alterna a visibilidade do dropdown
+      });
+    
+      // PARA DESLOGAR
+      const logoutLink = document.getElementById('logoutLink');
+      if (logoutLink) {
+        logoutLink.addEventListener('click', function() {
+          localStorage.removeItem('loggedIn'); // Remove o estado de login
+          window.location.reload(); // Recarrega a página
+        });
+      }
+    
+    } else {
+      // Código do cabeçalho deslogado
+      menu.innerHTML = `
+        <img src="./imgs/cart.svg" alt="">
+        <a href="./login.html" class="login">Faça seu login</a>
+      `;
+    }
+    
+    
+      </script>
+
+  <!-- Conteúdo principal da página "Meus Pedidos" -->
+  
+  <div class="container">
+    <h1 class="titulo">Meus Pedidos</h1>
+
+    <div class="pedido-item">
+      <span>Pedido #12345</span>
+      <button class="btn-detalhes" onclick="toggleDetalhes(this)">Ver Detalhes</button>
+      <div class="pedido-detalhes">
+        <ul>
+          <li><strong>Produto:</strong> <span id="produtoNomeExibido"></span></li>
+          <li><strong>Quantidade:</strong> <span id="quantidade"></span></li>
+          <li><strong>Preço:</strong> R$ <span id="precoTotal"></span></li>
+          <li><strong>Status:</strong> Preso em Curitiba</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+   
+
+  <script>
+    // Função para o BOTÃO VER DETALHES
+
+    function toggleDetalhes(button) {
+      const detalhes = button.nextElementSibling;
+      detalhes.style.display = detalhes.style.display === 'block' ? 'none' : 'block';
+    }
+
+    document.getElementById('produtoNomeExibido').textContent = localStorage.getItem('produtoNome') || 'Produto Indisponível';
+
+    document.getElementById('quantidade').textContent = localStorage.getItem('quantidadeTotal') || '0';
+
+    document.getElementById('precoTotal').textContent = localStorage.getItem('precoTotal') || '0.00';
+
+  </script>
+  </script>
+</body>
+
+</html>

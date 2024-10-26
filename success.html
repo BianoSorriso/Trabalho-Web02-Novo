@@ -175,7 +175,11 @@ const quantidadeTotal = localStorage.getItem('quantidadeTotal'); //
     
     document.getElementById('precoTotal').textContent = precoTotal ? `R$ ${parseFloat(precoTotal).toFixed(2).replace('.', ',')}` : 'R$ 0,00'; 
     
-    
+    /// SALVANDO OS VALORES PARA BUSCAR DEPOIS EM MEUS PEDIDOS
+
+    localStorage.setItem('produtoNome', produtoNomeExibido);
+  localStorage.setItem('quantidadeTotal', quantidadeTotal);
+  localStorage.setItem('precoTotal', precoTotal);
     
 
   </script>

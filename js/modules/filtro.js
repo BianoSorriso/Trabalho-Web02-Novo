@@ -61,13 +61,13 @@ function pesquisarItem() {
 
   nomeProdutos.forEach((produtos) => {
     if (texto != '') {
-      if (!produtos.innerHTML.toLowerCase().includes(texto)) {
+      if (!produtos.innerHTML.toLowerCase().includes(texto)) { // SE EU DIGITAR "CACHORRO" não vai aparecer nada, pq não existe esse nome.
        produtos.parentElement.classList.add('hidden');
       } else {
-        produtos.parentElement.classList.remove('hidden');
+        produtos.parentElement.classList.remove('hidden'); // SE EU DIGITAR O NOME DO PRODUTO CERTO OU PRÓXIMO, ELE VAI APARECER (REMOVE O HIDDEN)
       }
     } else {
-      produtos.parentElement.classList.remove('hidden');
+      produtos.parentElement.classList.remove('hidden'); // SE EU NÃO DIGITAR NADA, EU REMOVO O HIDDEN E TODOS OS PRODUTOS APARECEM. 
     }
   });
 }
