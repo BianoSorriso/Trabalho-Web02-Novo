@@ -73,12 +73,13 @@
     
       `;
     
-      // Adiciona a lógica de click pro dropdown
+      // LOGICA DO DROPDOWN
+
       const bgPerfil = document.querySelector('.bg-perfil');
       const modalPerfil = document.querySelector('.modal-perfil');
     
       bgPerfil.addEventListener('click', () => {
-        modalPerfil.classList.toggle('hidden'); // Alterna a visibilidade do dropdown
+        modalPerfil.classList.toggle('hidden'); 
       });
     
       // PARA DESLOGAR
@@ -111,10 +112,10 @@
       <button class="btn-detalhes" onclick="toggleDetalhes(this)">Ver Detalhes</button>
       <div class="pedido-detalhes">
         <ul>
-          <li><strong>Produto:</strong> <span id="produtoNomeExibido"></span></li>
-          <li><strong>Quantidade:</strong> <span id="quantidade"></span></li>
-          <li><strong>Preço:</strong> R$ <span id="precoTotal"></span></li>
-          <li><strong>Status:</strong> Preso em Curitiba</li>
+          <li><strong>Produto:</strong> <span id="produtoNomeExibido">Nenhum Produto</span></li>
+          <li><strong>Quantidade:</strong> <span id="quantidade">0</span></li>
+          <li><strong>Preço:</strong> R$ <span id="precoTotal">0,00</span></li>
+          <li><strong>Status:</strong> <span id="pedidoStatus">Nenhum pedido encontrado</span></li>
         </ul>
       </div>
     </div>
@@ -130,13 +131,38 @@
       detalhes.style.display = detalhes.style.display === 'block' ? 'none' : 'block';
     }
 
-    document.getElementById('produtoNomeExibido').textContent = localStorage.getItem('produtoNome') || 'Produto Indisponível';
+ 
+    
+    const produtoNome = localStorage.getItem('produtoNome');
+    const quantidadeTotal = localStorage.getItem('quantidadeTotal');
+    const precoTotal = localStorage.getItem('precoTotal');
+    const pedidoStatus = localStorage.getItem('pedidoStatus');
 
-    document.getElementById('quantidade').textContent = localStorage.getItem('quantidadeTotal') || '0';
 
-    document.getElementById('precoTotal').textContent = localStorage.getItem('precoTotal') || '0.00';
 
-  </script>
+   ///SE TIVER COMPRA, ELE VAI MOSTRAR OS VALORES
+    
+   
+   if (localStorage.getItem('pedidoRecente') === 'true') {
+
+    document.getElementById('produtoNomeExibido').textContent = produtoNome;
+    document.getElementById('quantidade').textContent = quantidadeTotal;
+    document.getElementById('precoTotal').textContent = precoTotal;
+    document.getElementById('pedidoStatus').textContent = pedidoStatus;
+
+     ///LIMPANDO PARA VOLTAR AO PADRÃO APÓS ATUALIZAR PÁGINA
+    localStorage.removeItem('pedidoRecente');
+      
+    }else { 
+      
+    
+    localStorage.setItem('produtoNomeExibido', 'Produto Indisponível');
+      localStorage.setItem('quantidadeTotal', '0');
+      localStorage.setItem('precoTotal', '0.00');
+      localStorage.setItem('pedidoStatus', 'Nenhum pedido encontrado');
+
+    }
+    
   </script>
 </body>
 

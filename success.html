@@ -166,7 +166,7 @@ const produtoNomeExibido = localStorage.getItem('produtoNome');
 
 const quantidadeTotal = localStorage.getItem('quantidadeTotal'); // 
     const precoTotal = localStorage.getItem('precoTotal'); // 
-
+    const pedidoStatus = "Preso em Curitiba";
     
     
  
@@ -180,6 +180,9 @@ const quantidadeTotal = localStorage.getItem('quantidadeTotal'); //
     localStorage.setItem('produtoNome', produtoNomeExibido);
   localStorage.setItem('quantidadeTotal', quantidadeTotal);
   localStorage.setItem('precoTotal', precoTotal);
+  localStorage.setItem('pedidoStatus', pedidoStatus);
+
+  localStorage.setItem('pedidoRecente', 'true');
     
 
   </script>
