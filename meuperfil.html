@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Zen+Dots&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="./imgs/favicon.svg" type="image/svg+xml">
+  <title>Fago Sports - Meu Perfil</title>
+
+<style> 
+  .container {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 800px;
+  }
+  
+  .nomes {
+    color: rgb(7, 7, 7); /* Altere para a cor desejada */
+  }
+  
+  .titulo {
+    font-family: 'Zen Dots', sans-serif;
+    color: #a19c9c;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 19px;
+  }
+  
+  .perfil-info, .historico-compras {
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .perfil-info h2, .historico-compras h2 {
+    font-family: 'Zen Dots';
+    color: #000000;
+    margin-bottom: 15px;
+  }
+  
+  .perfil-info ul {
+    font-family: 'Zen Dots';
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .perfil-info ul li {
+    font-family: 'Zen Dots';
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .btn-editar {
+    display: inline-block;
+    padding: 8px 15px;
+    margin-top: 10px;
+    border: 2px solid #b9b4b0;
+    border-radius: 20px;
+    background-color: #050505;
+    color: #c4b1ab;
+    font-family: 'zen dots', sans-serif;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .btn-editar:hover {
+    background-color: #333;
+  }
+  
+  
+  p{
+    font-family: 'zen dots', sans-serif;
+   
+  }
+
+</style>  
+
+
+  
+</head>
+
+<body>
+  <header>
+    <nav aria-label="primaria">
+      <div class="logo">
+        <a href="./"><img src="./imgs/Logo.svg" alt="logo Fago" width="253" height="34"></a>
+      </div>
+      <div class="menu" id="menu">
+        <img src="./imgs/cart.svg" alt="Carrinho">
+        <span id="numero">0</span>
+        <a href="./login.html" class="login">Faça seu login</a>
+      </div>
+    </nav>
+  </header> 
+
+  <script>
+    // Verifica se o usuário está logado
+    const isLoggedIn = localStorage.getItem('loggedIn');
+    
+    const menu = document.getElementById('menu');
+    
+    if (isLoggedIn) {
+      // Código do cabeçalho logado
+      menu.innerHTML = `
+      <div class="menu">
+        <div id="carrinho">
+          <div class="modal-carrinho hidden">
+            <h1 class="titulo cor-3">Carrinho está vazio</h1>
+            <div class="cart-actions"></div>
+          </div>
+          <span id="numero">0</span>
+          <img src="./imgs/cart.svg" alt="Carrinho">
+        </div>
+        <div class="perfil">
+          <div class="bg-perfil">
+            <img src="./imgs/FotoPerfil.svg" alt="" class="perfil-img">
+            <div class="modal-perfil hidden">
+              <div class="perfil">
+                <img src="./imgs/user-circle.svg" alt="">
+                <h1 class="titulo cor-3 medio">Meu perfil</h1>
+              </div>
+              <div class="logout">
+                <img src="./imgs/logout.svg" alt="">
+                <h1 class="titulo alert medio" id="logoutLink">Sair</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>`;
+      
+      // Adiciona a lógica de click pro dropdown
+      const bgPerfil = document.querySelector('.bg-perfil');
+      const modalPerfil = document.querySelector('.modal-perfil');
+      
+      bgPerfil.addEventListener('click', () => {
+        modalPerfil.classList.toggle('hidden'); // Alterna a visibilidade do dropdown
+      });
+      
+      // PARA DESLOGAR
+      const logoutLink = document.getElementById('logoutLink');
+      if (logoutLink) {
+        logoutLink.addEventListener('click', function() {
+          localStorage.removeItem('loggedIn'); // Remove o estado de login
+          window.location.reload(); // Recarrega a página
+        });
+      }
+    } else {
+      // Código do cabeçalho deslogado
+      menu.innerHTML = `
+        <img src="./imgs/cart.svg" alt="">
+        <a href="./login.html" class="login">Faça seu login</a>
+      `;
+    }
+  </script>
+
+
+
+<main class="container">
+    <h1 class="titulo">Minha Conta</h1>
+
+    <section class="perfil-info">
+      <h2>Informações Pessoais</h2>
+      <ul>
+        <li><strong class="nomes">Nome:</strong> <span id="nomeUsuario">Fabiano Gomes</span></li>
+        <li><strong class="nomes">Email:</strong> <span id="emailUsuario">fabiano@soulasalle.com.br</span></li>
+        <li><strong class="nomes">Telefone:</strong> <span id="telefoneUsuario">(21) 4002-8922</span></li>
+        <li><strong class="nomes">CPF:</strong> <span id="cpf">123.456.789-01</span></li>
+        
+        <li><strong class="nomes">Cartão:</strong> <span id="cartão">****.****.****.****</span></li>
+        <li><strong class="nomes">Endereço:</strong> <span id="endereco">Rua 01 - Santa Rosa - Niterói - RJ</span></li>
+        
+      </ul>
+      <button class="btn-editar" onclick="editarPerfil()">Editar Perfil</button>
+      
+    </section>
+
+   
+  </main>
+
+  <footer>
+    <div class="minhaConta">
+      <ul>
+        <li>
+          <h1>Minha Conta</h1>
+        </li>
+        <li><a href="">Minha Conta</a></li>
+        <li><a href="">Meus Pedidos</a></li>
+        <li><a href="">Pagamentos</a></li>
+      </ul>
+    </div>
+    <div class="institucional">
+      <ul>
+
+        <li>
+          <h1>Institucional</h1>
+        </li>
+        <li><a href="">História</a></li>
+        <li><a href="">Depoimentos</a></li>
+        <li><a href="">Código do Consumidor</a></li>
+        <li><a href="">Política de Privacidade</a></li>
+      </ul>
+    </div>
+    <div class="meiosPagamentos">
+      <ul>
+        <li>
+          <h1>Meios de Pagamento</h1>
+        </li>
+        <li><img src="./imgs/pix.png" alt="" width="57.78"></li>
+        <li><img src="./imgs/picpay.png" alt="" width="60"></li>
+        <li><img src="./imgs/mastercard.png" alt="" width="25.56"></li>
+        <li><img src="./imgs/visa.png" alt="" width="56.92"></li>
+        <li><img src="./imgs/americanexpress.png" alt="" width="56.92"></li>
+        <li><img src="./imgs/paypal.png" alt="" width="84"></li>
+      </ul>
+    </div>
+    <div class="redesSociais">
+      <ul>
+        <li>
+          <h1>Redes Sociais</h1>
+        </li>
+        <li><img src="./imgs/instagram.png" alt="" width="20"></li>
+        <li><img src="./imgs/facebook.png" alt="" width="20"></li>
+        <li><img src="./imgs/twitter.png" alt="" width="20"></li>
+        <li><img src="./imgs/tiktok.png" alt="" width="20"></li>
+
+      </ul>
+    </div>
+
+  </footer>
+  <div class="copy">Copyright © FagoSports 2024 | Imagens meramente ilustrativas | Design feito por Fabiano, Bel Siqueira e Matheus Dias | Desenvolvido por Fabiano, Bel Siqueira e Matheus Dias</div>
+
+
+
+
+
+
+
+
+  <script src="script.js"></script>
+
+
+  
+</body>
+
+</html>
