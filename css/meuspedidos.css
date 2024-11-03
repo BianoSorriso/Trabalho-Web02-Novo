@@ -1,6 +1,4 @@
-/* Estilos específicos para a página Meus Pedidos */
 
-/* Fonte Zen Dots apenas nos elementos desta página */
 .titulo, .pedido-item span, .btn-detalhes, .pedido-detalhes li {
   font-family: 'Zen Dots', sans-serif;
 }
