@@ -9,6 +9,7 @@ html {
   --titulo-pequeno: 0.5rem; 
   --subtitulo-grande: 0.1rem;
   --subtitulo-pequeno: 0.1rem; 
+  overflow-x: hidden;
 }
 
 .btn {
@@ -150,5 +151,7 @@ html {
   color: #d94e4e;
 }
 
-
+body {
+  overflow-x: hidden;
+}
 
