@@ -32,9 +32,6 @@ nav {
   gap: 30px;
 }
 
-
-
-
 @media (max-width: 800px) {
   nav {
     grid-template-columns: 1fr 1fr;
