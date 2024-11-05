@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
 
-
+* {
+  box-sizing: border-box; 
+}
 
 
 #catalogo {
@@ -21,15 +23,27 @@
   font-family: 'Zen Dots', cursive;
 }
 
-.search input,
+
 .search input:focus {
   border: 0 none;
   outline: none;
   box-shadow: 0 0 0 0;
   background-color: #d8995a; 
-  margin-left:130px;
+ 
   color: #010101; 
   
+}
+
+.search input {
+  
+  border: 0 none;
+  outline: none;
+  box-shadow: 0 0 0 0;
+  background-color: #d8995a; 
+  color: #010101; 
+  padding: 10px;
+  max-width: 280px; 
+  width: calc(100% - 20px); 
 }
 
 .search {
@@ -37,7 +51,7 @@
   display: flex;
   justify-content: space-between;
   gap: 75px;
-  width: max-content;
+  max-width: 600px; 
   border-radius: 10px;
   padding: 5px 30px;
   margin-bottom: 30px;
@@ -48,12 +62,9 @@
 
 .search input::placeholder {
   color: #282727;
-
   font-family: 'Zen Dots', cursive;
   font-size: 0.75rem;
-  margin-left:25px;
   text-align: center;
-  margin: auto
 }
 
 .icones {
@@ -99,12 +110,20 @@
     font-size: 0.875rem;
     padding: 9px 18px;
   }
+}
   .search {
-    gap: 50px;
+    gap: 10px; 
+    padding: 5px; 
+
+    .search input {
+      padding: 8px; 
+      font-size: 0.8rem; 
   }
 }
 
-@media (max-width: 440px) {
+
+
+@media (max-width: 940px) {
   .catalogo {
     display: flex;
     flex-direction: column;
@@ -117,7 +136,8 @@
     justify-content: flex-start;
   }
   .search {
-    gap: 20px;
+    flex-direction: column; 
+    align-items: center; 
   }
   .catalogo > p {
     padding-left: 10px;
@@ -128,7 +148,7 @@
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 180px) {
   .catalogo > p {
     font-size: 0.875rem;
   }
