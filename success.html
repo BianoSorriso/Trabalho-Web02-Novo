@@ -182,10 +182,21 @@ const quantidadeTotal = localStorage.getItem('quantidadeTotal'); //
   localStorage.setItem('precoTotal', precoTotal);
   localStorage.setItem('pedidoStatus', pedidoStatus);
 
-  localStorage.setItem('pedidoRecente', 'true');
-    
+  localStorage.setItem('pedidoRecente', 'true');    
 
   </script>
+
+
+<script>
+  window.addEventListener('load', () => {
+    const audio = new Audio('./imgs/BOTAFOGOPORRA.mp3'); 
+
+    
+    setTimeout(() => {
+      audio.play().catch(err => console.error('Erro ao reproduzir áudio:', err));
+    }, 500); 
+  });
+</script>
 
   <style>
     
@@ -213,6 +224,8 @@ const quantidadeTotal = localStorage.getItem('quantidadeTotal'); //
       overflow-x: hidden; 
     }
   </style>
+
+  
 
 </body>
 
